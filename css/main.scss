@@ -94,11 +94,40 @@ $color25:#DC403B;
 body{
 	font-family:$font-roboto;
 	font-size: 12px;
-}
+	h1 {
+	font-size: 5em;
+	text-transform: uppercase;
+	}
 
+	h2{
+	font-size: 2em;
+	}
+
+	h3{
+	font-size: 1em;
+	}
+	p {
+	font-size: 1em;
+	}
+
+	h1 , h2 , h3 , h4 {
+	text-align: center;
+	}
+	hr{
+		width:20%
+	}
+
+}
+	.row{
+		padding-top:3%;
+	}
 section , footer{
 	@include pd();
 }
+
+.btn-black{
+		@include btn-black();
+	}
 
 //header
 
@@ -107,10 +136,13 @@ header{
 	background-color: $bg-green;
 	position:fixed;
 	top:0;
-	z-index: 5;
+	z-index: 20;
 	.navbar{
 		width:100%;	
 		margin: 1% 0 1%;
+		.icon-bar{
+			background-color:$white;
+		}
 		a{
 			text-decoration: none;
 			&:hover, &:focus {
@@ -124,33 +156,7 @@ header{
 }
 
 
-//common in sections
 
-h1 {
-	font-size: 5em;
-	text-transform: uppercase;
-	}
-
-h2{
-	font-size: 2em;
-}
-
-h3{
-	font-size: 1em;
-}
-p {
-	font-size: 1em;
-	}
-
-h1 , h2 , h3 , h4 {
-	text-align: center;
-}
-
-
-
-.btn-black{
-		@include btn-black();
-	}
 
 // hero-image
 #hero-image {
@@ -167,6 +173,10 @@ h1 , h2 , h3 , h4 {
 
 #paleta{
 	color: $gray;
+	hr{
+		border-top: 1px solid $gray;
+		padding-bottom: 3%;	
+	}
 	.box-palette{
 		
 		div:nth-child(1){
@@ -312,7 +322,7 @@ h1 , h2 , h3 , h4 {
 	}
 	img{
 		width: 75%;
-		height: 30em;
+		height: auto;
 	}
 
 }
@@ -441,16 +451,21 @@ h1 , h2 , h3 , h4 {
             margin: 5px;
             top: 3px;
         }
+
 //clientes
 
 #clients{
 	background-color: $bg-blue;
 	color:white;
+	h3{
+		padding-bottom: 3%;
+	}
 	.testimony{
 		width:60%;
 		color: $light-gray;
 		font-style: italic;
 		margin:0 auto;
+		padding-bottom:5%;
 	}
 	span{
 		color: $mustard;
@@ -483,9 +498,9 @@ h1 , h2 , h3 , h4 {
     div{
     	display:flex;
     	justify-content: center;
-    	padding-top:10%;
 
     }
+
     a{
     	font-size: 10em;
     	margin-right: 20px;
@@ -497,10 +512,11 @@ h1 , h2 , h3 , h4 {
 footer{
 	background-color: $bg-green;
 	color: $white;
+	padding-bottom:2%;
 	.btn{
 		margin-top: 0;
 		background-color: $button-black;
-		border: 0px;
+		border: 1px solid $button-black;
 	}
 	i{
 		color: $mustard;
@@ -509,6 +525,8 @@ footer{
 }
 
 .copyright{
+	margin-top:10%;
 	display:flex;
 	justify-content: space-between;
 }
+

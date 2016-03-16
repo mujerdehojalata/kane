@@ -3,41 +3,25 @@
 body {
   font-family: Roboto;
   font-size: 12px; }
+  body h1 {
+    font-size: 5em;
+    text-transform: uppercase; }
+  body h2 {
+    font-size: 2em; }
+  body h3 {
+    font-size: 1em; }
+  body p {
+    font-size: 1em; }
+  body h1, body h2, body h3, body h4 {
+    text-align: center; }
+  body hr {
+    width: 20%; }
+
+.row {
+  padding-top: 3%; }
 
 section, footer {
   padding: 10% 0 10%; }
-
-header {
-  width: 100%;
-  background-color: #27AD60;
-  position: fixed;
-  top: 0;
-  z-index: 5; }
-  header .navbar {
-    width: 100%;
-    margin: 1% 0 1%; }
-    header .navbar a {
-      text-decoration: none; }
-      header .navbar a:hover, header .navbar a:focus {
-        color: #2C3E50;
-        background: none;
-        font-weight: none; }
-
-h1 {
-  font-size: 5em;
-  text-transform: uppercase; }
-
-h2 {
-  font-size: 2em; }
-
-h3 {
-  font-size: 1em; }
-
-p {
-  font-size: 1em; }
-
-h1, h2, h3, h4 {
-  text-align: center; }
 
 .btn-black {
   background-color: #443E44;
@@ -49,6 +33,24 @@ h1, h2, h3, h4 {
     border: 6px solid #E67E22;
     color: white;
     text-decoration: none; }
+
+header {
+  width: 100%;
+  background-color: #27AD60;
+  position: fixed;
+  top: 0;
+  z-index: 20; }
+  header .navbar {
+    width: 100%;
+    margin: 1% 0 1%; }
+    header .navbar .icon-bar {
+      background-color: #FFFFFF; }
+    header .navbar a {
+      text-decoration: none; }
+      header .navbar a:hover, header .navbar a:focus {
+        color: #2C3E50;
+        background: none;
+        font-weight: none; }
 
 #hero-image {
   background: url(../img/carousel-bg.jpg) no-repeat center center fixed;
@@ -63,6 +65,9 @@ h1, h2, h3, h4 {
 
 #paleta {
   color: #443E44; }
+  #paleta hr {
+    border-top: 1px solid #443E44;
+    padding-bottom: 3%; }
   #paleta .box-palette div:nth-child(1) {
     background-color: #69D2E7;
     float: left;
@@ -224,7 +229,7 @@ h1, h2, h3, h4 {
     background-color: #E67E22; }
   #about-us img {
     width: 75%;
-    height: 30em; }
+    height: auto; }
 
 #what-we-do {
   background-color: #27AD60;
@@ -319,11 +324,14 @@ h1, h2, h3, h4 {
 #clients {
   background-color: #2C3E50;
   color: white; }
+  #clients h3 {
+    padding-bottom: 3%; }
   #clients .testimony {
     width: 60%;
     color: #C1C1C1;
     font-style: italic;
-    margin: 0 auto; }
+    margin: 0 auto;
+    padding-bottom: 5%; }
   #clients span {
     color: #E67E22; }
 
@@ -344,23 +352,24 @@ h1, h2, h3, h4 {
   height: 400px; }
   #sociales div {
     display: flex;
-    justify-content: center;
-    padding-top: 10%; }
+    justify-content: center; }
   #sociales a {
     font-size: 10em;
     margin-right: 20px; }
 
 footer {
   background-color: #27AD60;
-  color: #FFFFFF; }
+  color: #FFFFFF;
+  padding-bottom: 2%; }
   footer .btn {
     margin-top: 0;
     background-color: #443E44;
-    border: 0px; }
+    border: 1px solid #443E44; }
   footer i {
     color: #E67E22; }
 
 .copyright {
+  margin-top: 10%;
   display: flex;
   justify-content: space-between; }
 
