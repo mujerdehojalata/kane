@@ -67,6 +67,7 @@ $color25:#DC403B;
 	padding: 10px 28px;
   &:hover{ 
     background-color: $mustard;
+    border: 6px solid $mustard;
     color: white;
     text-decoration: none;
   }
@@ -83,17 +84,20 @@ $color25:#DC403B;
 	background-color: $color;
 }
 
-@mixin social-media() {
-  height: 2em;
-  margin: 0 5px;
-  padding: 5px;
-  width: 2em;
+
+
+@mixin pd() {
+	padding: 10% 0 10%;
 }
 
 
 body{
 	font-family:$font-roboto;
 	font-size: 12px;
+}
+
+section , footer{
+	@include pd();
 }
 
 //header
@@ -127,6 +131,13 @@ h1 {
 	text-transform: uppercase;
 	}
 
+h2{
+	font-size: 2em;
+}
+
+h3{
+	font-size: 1em;
+}
 p {
 	font-size: 1em;
 	}
@@ -134,6 +145,8 @@ p {
 h1 , h2 , h3 , h4 {
 	text-align: center;
 }
+
+
 
 .btn-black{
 		@include btn-black();
@@ -351,31 +364,26 @@ h1 , h2 , h3 , h4 {
 #pricing{
 	background-color: $bg-blue;
 	color:white;
+	.db-wrapper{
+		border: 3px solid #bg-green;
+	}
+	.brown{
+		background-color: $hover-mustard;
+		color:$white;
+	}
+	.price{
+		background-color: $bg-green;
+		color:$white;
+	}
+	.white{
+		background-color: $white;
+		color: $gray;
+	}	
+	.pricing-footer{
+		background-color: $bg-blue;
+	}
+		
 }
-
-
-//clientes
-
-#clients{
-	background-color: $bg-blue;
-	color:white;
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 //pricing
 
@@ -433,12 +441,74 @@ h1 , h2 , h3 , h4 {
             margin: 5px;
             top: 3px;
         }
+//clientes
 
-// form
-.form-area
-{
-    background-color: #FAFAFA;
-	padding: 10px 40px 60px;
-	margin: 10px 0px 60px;
-	border: 1px solid GREY;
+#clients{
+	background-color: $bg-blue;
+	color:white;
+	.testimony{
+		width:60%;
+		color: $light-gray;
+		font-style: italic;
+		margin:0 auto;
 	}
+	span{
+		color: $mustard;
+	}
+}
+
+// get in touch
+
+#get-in-touch{
+	background-color: $bg-blue;
+	color:white;
+	.form-area{
+		padding: 10px 40px 60px;
+		margin: 10px 0px 60px;
+
+	}
+}
+
+
+// sociales
+
+#sociales{
+	background: url(../img/img-divider-img.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    color: $white;
+    height: 400px;
+    div{
+    	display:flex;
+    	justify-content: center;
+    	padding-top:10%;
+
+    }
+    a{
+    	font-size: 10em;
+    	margin-right: 20px;
+    }
+}
+
+// footer
+
+footer{
+	background-color: $bg-green;
+	color: $white;
+	.btn{
+		margin-top: 0;
+		background-color: $button-black;
+		border: 0px;
+	}
+	i{
+		color: $mustard;
+	}
+
+}
+
+.copyright{
+	display:flex;
+	justify-content: space-between;
+}
