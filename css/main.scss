@@ -1,0 +1,532 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,300,300italic,500,400italic,700);
+
+$font-roboto: Roboto;
+
+$bg-green:#27AD60;
+$bg-blue:#2C3E50;
+$white:#FFFFFF;
+$progress-gray:#DCD5D5;
+$gray:#443E44;
+
+$button-black:#443E44;
+
+$mustard:#E67E22;
+$hover-mustard:#A96931;
+$hover-green:#2A7257; 
+
+$light-gray:#C1C1C1; /* social - iconos */
+
+// paleta de colores
+
+$color1:#69D2E7;
+$color2:#A7DBDB;
+$color3:#E0E4CC;
+$color4:#F38630;
+$color5:#FA6900;
+$color6:#E94C6F;
+$color7:#542733;
+$color8:#5A6A62;
+$color9:#C6D5CD;
+$color10:#FDF200;
+$color11:#DB3340;
+$color12:#E8B71A;
+$color13:#F7EAC8;
+$color14:#1FDA9A;
+$color15:#28ABE3;
+$color16:#588C73;
+$color17:#F2E394;
+$color18:#F2AE72;
+$color19:#D96459;
+$color20:#8C4646;
+$color21:#D0C91F;
+$color22:#85C4B9;
+$color23:#008BBA;
+$color24:#DF514C;
+$color25:#DC403B;
+
+// mixin 
+
+@mixin transition($transition) {
+  -webkit-transition: $transition;
+  -moz-transition: $transition;
+  -o-transition: $transition;
+  transition: $transition;
+}
+
+@mixin border-radius($radius) {
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+	-ms-border-radius: $radius;
+	border-radius: $radius;
+}
+
+@mixin btn-black() {
+  background-color: $button-black;
+  border: 2px solid $button-black;
+  color: $white;
+	padding: 10px 28px;
+  &:hover{ 
+    background-color: $mustard;
+    border: 6px solid $mustard;
+    color: white;
+    text-decoration: none;
+  }
+}
+
+@mixin color() {
+  	float: left;
+	width: 20%;
+	height: 100px;
+	margin-top: 10px;
+}
+
+@mixin bg($color){
+	background-color: $color;
+}
+
+
+
+@mixin pd() {
+	padding: 10% 0 10%;
+}
+
+
+body{
+	font-family:$font-roboto;
+	font-size: 12px;
+	h1 {
+	font-size: 5em;
+	text-transform: uppercase;
+	}
+
+	h2{
+	font-size: 2em;
+	}
+
+	h3{
+	font-size: 1em;
+	}
+	p {
+	font-size: 1em;
+	}
+
+	h1 , h2 , h3 , h4 {
+	text-align: center;
+	}
+	hr{
+		width:20%
+	}
+
+}
+	.row{
+		padding-top:3%;
+	}
+section , footer{
+	@include pd();
+}
+
+.btn-black{
+		@include btn-black();
+	}
+
+//header
+
+header{
+	width:100%;
+	background-color: $bg-green;
+	position:fixed;
+	top:0;
+	z-index: 20;
+	.navbar{
+		width:100%;	
+		margin: 1% 0 1%;
+		.icon-bar{
+			background-color:$white;
+		}
+		a{
+			text-decoration: none;
+			&:hover, &:focus {
+      		color: $bg-blue;
+      		background: none;
+      		font-weight: none;
+      		}
+
+		}
+	}
+}
+
+
+
+
+// hero-image
+#hero-image {
+	background: url(../img/carousel-bg.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    color: $white;
+    height: 100%;
+	padding: 14% 0;
+	width: 100%;
+	}
+
+#paleta{
+	color: $gray;
+	hr{
+		border-top: 1px solid $gray;
+		padding-bottom: 3%;	
+	}
+	.box-palette{
+		
+		div:nth-child(1){
+			@include bg($color1);
+			@include color();
+
+		}
+
+		div:nth-child(2){
+			@include bg($color2);
+			@include color();
+		}
+
+		div:nth-child(3){
+			@include bg($color3);
+			@include color();
+		}
+
+		div:nth-child(4){
+			@include bg($color4);
+			@include color();
+		}
+
+		div:nth-child(5){
+			@include bg($color5);
+			@include color();
+		}
+
+		div:nth-child(6){
+			@include bg($color6);
+			@include color();
+		}
+
+		div:nth-child(7){
+			@include bg($color7);
+			@include color();
+		}
+
+		div:nth-child(8){
+			@include bg($color8);
+			@include color();
+		}
+
+		div:nth-child(9){
+			@include bg($color9);
+			@include color();
+		}
+
+		div:nth-child(10){
+			@include bg($color10);
+			@include color();
+		}
+
+		div:nth-child(11){
+			@include bg($color11);
+			@include color();
+		}
+
+		div:nth-child(12){
+			@include bg($color12);
+			@include color();
+		}
+
+		div:nth-child(13){
+			@include bg($color13);
+			@include color();
+		}
+
+		div:nth-child(14){
+			@include bg($color14);
+			@include color();
+		}
+
+		div:nth-child(15){
+			@include bg($color15);
+			@include color();
+		}
+
+		div:nth-child(16){
+			@include bg($color16);
+			@include color();
+		}
+
+		div:nth-child(17){
+			@include bg($color17);
+			@include color();
+		}
+
+		div:nth-child(18){
+			@include bg($color18);
+			@include color();
+		}
+
+		div:nth-child(19){
+			@include bg($color19);
+			@include color();
+		}
+
+		div:nth-child(20){
+			@include bg($color20);
+			@include color();
+		}
+
+		div:nth-child(21){
+			@include bg($color21);
+			@include color();
+		}
+
+		div:nth-child(22){
+			@include bg($color22);
+			@include color();
+		}
+
+		div:nth-child(23){
+			@include bg($color23);
+			@include color();
+		}
+
+		div:nth-child(24){
+			@include bg($color24);
+			@include color();
+		}
+
+		div:nth-child(25){
+			@include bg($color25);
+			@include color();
+		}
+
+	}
+}
+
+// about us
+
+#about-us{
+	background-color: $bg-blue;
+	color:$white;
+	.progress{
+		background-color: $progress-gray; 
+		border: 2px solid $progress-gray;
+	}
+	.progress-bar{
+		background-color: $mustard;
+	}
+	img{
+		width: 75%;
+		height: auto;
+	}
+
+}
+
+
+// what we do 
+
+#what-we-do{
+	background-color: $bg-green;
+	color: $white;
+	text-align:center;
+	.bg-img{
+		background:url(../img/icon-bg.png)  no-repeat center center;
+		width: 150px;
+		height: 150px;
+		background-color:$bg-blue;
+		display:flex;
+		justify-content: center;
+		align-content:center;
+		padding:20px;
+
+	}
+	img{
+		width: 100px;
+		height: 100px;
+	}
+	p{
+		color: $light-gray;
+	}
+	
+}
+
+// team
+
+#team{
+	background-color: $bg-green;
+	color:$white;
+	h5{
+		color:$button-black;
+	}
+	p{
+		color: $light-gray;	
+	}
+}
+
+
+//pricing
+
+#pricing{
+	background-color: $bg-blue;
+	color:white;
+	.db-wrapper{
+		border: 3px solid #bg-green;
+	}
+	.brown{
+		background-color: $hover-mustard;
+		color:$white;
+	}
+	.price{
+		background-color: $bg-green;
+		color:$white;
+	}
+	.white{
+		background-color: $white;
+		color: $gray;
+	}	
+	.pricing-footer{
+		background-color: $bg-blue;
+	}
+		
+}
+
+//pricing
+
+.db-pricing-seven {
+    margin-bottom: 30px;
+    margin-top: 30px;
+    text-align: center;
+    border: 1px solid #C5C2C2;
+    background-color: #EDEDED;
+}
+
+    .db-pricing-seven:hover {
+        margin-top: 5px;
+        -moz-transition: margin-top 0.25s ease 0s;
+        -ms-transition: margin-top 0.25s ease 0s;
+        transition: margin-top 0.25s ease 0s;
+    }
+
+    .db-pricing-seven ul {
+        list-style: none;
+        margin: 0;
+        text-align: center;
+        padding-left: 0px;
+    }
+
+        .db-pricing-seven ul li {
+            border-bottom: solid 1px #D8D8D8;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            cursor: pointer;
+            text-transform: uppercase;
+        }
+
+            .db-pricing-seven ul li.price {
+                background-color: #fff;
+                padding: 40px 20px 20px 20px;
+                font-size: 20px;
+                font-weight: 900;
+                color: #353c3e;
+                font-weight: 900;
+            }
+
+                .db-pricing-seven ul li.price i {
+                    padding: 30px;
+                    font-size: 50px;
+                    display: block;
+                }
+
+
+    .db-pricing-seven .pricing-footer {
+        padding: 20px;
+    }
+
+        .db-pricing-seven .pricing-footer a i {
+            margin: 5px;
+            top: 3px;
+        }
+
+//clientes
+
+#clients{
+	background-color: $bg-blue;
+	color:white;
+	h3{
+		padding-bottom: 3%;
+	}
+	.testimony{
+		width:60%;
+		color: $light-gray;
+		font-style: italic;
+		margin:0 auto;
+		padding-bottom:5%;
+	}
+	span{
+		color: $mustard;
+	}
+}
+
+// get in touch
+
+#get-in-touch{
+	background-color: $bg-blue;
+	color:white;
+	.form-area{
+		padding: 10px 40px 60px;
+		margin: 10px 0px 60px;
+
+	}
+}
+
+
+// sociales
+
+#sociales{
+	background: url(../img/img-divider-img.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    color: $white;
+    height: 400px;
+    div{
+    	display:flex;
+    	justify-content: center;
+
+    }
+
+    a{
+    	font-size: 10em;
+    	margin-right: 20px;
+    }
+}
+
+// footer
+
+footer{
+	background-color: $bg-green;
+	color: $white;
+	padding-bottom:2%;
+	.btn{
+		margin-top: 0;
+		background-color: $button-black;
+		border: 1px solid $button-black;
+	}
+	i{
+		color: $mustard;
+	}
+
+}
+
+.copyright{
+	margin-top:10%;
+	display:flex;
+	justify-content: space-between;
+}
+
